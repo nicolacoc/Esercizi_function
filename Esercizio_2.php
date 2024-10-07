@@ -6,11 +6,12 @@ function GetPrimeNumber(int $startNumber, int $endNumber = 10): array
 
     $Numbers = array();
     for ($i = $startNumber, $ok = 1; $ok <= $endNumber; $i++) {
-
-        $number = primeNumber($i);
-        if ($number) {
-            $Numbers[] = $i;
-            $ok++;
+        if ($i > 0) {
+            $number = primeNumber($i);
+            if ($number) {
+                $Numbers[] = $i;
+                $ok++;
+            }
         }
 
     }
