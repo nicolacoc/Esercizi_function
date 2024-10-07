@@ -1,14 +1,21 @@
 <?php
-require_once ('Esercizio_1.php');
+require_once('Esercizio_1.php');
 
-$max = 10;
+function GetPrimeNumber(int $startNumber, int $endNumber = 10): array
+{
 
-for ($i = 0, $ok = 1; $ok <= $max; $i++){
+    $Numbers = array();
+    for ($i = $startNumber, $ok = 1; $ok <= $endNumber; $i++) {
 
-    $number = primeNumber($i);
-    if ($number){
-        echo $i . ($ok == $max ? "":", ");
-        $ok++;
+        $number = primeNumber($i);
+        if ($number) {
+            $Numbers[] = $i;
+            $ok++;
+        }
+
     }
-
+    return $Numbers;
 }
+
+$numbers = GetPrimeNumber(1, 10);
+echo implode(", ", $numbers);
