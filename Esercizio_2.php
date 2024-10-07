@@ -1,9 +1,9 @@
 <?php
-require_once('Esercizio_1.php');
+
 
 function GetPrimeNumber(int $startNumber, int $endNumber = 10): array
 {
-
+    require_once('Esercizio_1.php');
     $Numbers = array();
     for ($i = $startNumber, $ok = 1; $ok <= $endNumber; $i++) {
         if ($i > 0) {
