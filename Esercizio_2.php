@@ -17,5 +17,5 @@ function GetPrimeNumber(int $startNumber, int $endNumber = 10): array
     return $Numbers;
 }
 
-$numbers = GetPrimeNumber(1, 10);
+$numbers = GetPrimeNumber(1);
 echo implode(", ", $numbers);
